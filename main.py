@@ -1,7 +1,5 @@
 from flask import Flask
 import random
-import os
-import requests
 
 app = Flask(__name__)
 
@@ -18,7 +16,11 @@ fact_list = ["Большинство людей, страдающих техно
 
         
 def hello_world():
-    return f'<h1>Hello World</h1>  <h2> Добро пожалывать 😀</h2> <a href="/random_fact">Посмотреть случайный факт!</a> <br> <a href="/flip_coin">Бросок монетки!❌/✔</a> <br> <a href="/pass_generate">Генератор паролей 🔐</a> '
+    return f"""<h1>Hello World</h1> 
+      <h2> Добро пожалывать 😀</h2> 
+      <a href="/random_fact">Посмотреть случайный факт!</a> <br>
+        <a href="/flip_coin">Бросок монетки!❌/✔</a> <br> 
+        <a href="/pass_generate">Генератор паролей 🔐</a> """
     
 @app.route("/random_fact")
 def random_fact():
